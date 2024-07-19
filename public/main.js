@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const fetchExpenses = async () => {
     try {
       const response = await fetch(
-        'https://expenses-monitor-api.onrender.com/expenses'
+        'https://expensemonitor.onrender.com/expenses'
       );
       const expenses = await response.json();
       expensesList.innerHTML = '';
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const amount = parseFloat(formData.get('amount'));
 
     try {
-      await fetch('https://expenses-monitor-api.onrender.com/expenses', {
+      await fetch('https://expensemonitor.onrender.com/expenses', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const id = e.target.getAttribute('data-id');
       try {
         await fetch(
-          `https://expenses-monitor-api.onrender.com/expenses/${id}`,
+          `https://expensemonitor.onrender.com/expenses/${id}`,
           {
             method: 'DELETE',
           }
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     try {
       const response = await fetch(
-        'https://expenses-monitor-api.onrender.com/auth/signup',
+        'https://expensemonitor.onrender.com/auth/signup',
         {
           method: 'POST',
           headers: {
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     try {
       const response = await fetch(
-        'https://expenses-monitor-api.onrender.com/auth/login',
+        'https://expensemonitor.onrender.com/auth/login',
         {
           method: 'POST',
           headers: {
