@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     try {
       const response = await fetch(
-        'https://expenses-monitor-api.onrender.com/auth/login',
+        'https://expensemonitor.onrender.com/auth/login',
         {
           method: 'POST',
           headers: {
